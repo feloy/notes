@@ -92,3 +92,37 @@ As suffix:
     
     /*! never removed comment, 
      *  useful for copyright notices */
+
+## Variables
+
+Syntax
+
+    $my-color = #ff0088;
+    
+    p.colored {
+      // - and _ are interchangeable
+      color: $my_color
+    }
+
+Global vs local
+
+    $global-size = 4px;
+    p {
+      font-size: $global-size;
+      $local-color: #FF0088;
+      color: $local-color;
+    }
+    
+Interpolation: #{}
+
+    $name: foo;
+    $attr: border;
+    p.#{$name} {
+      #{$attr}-color: blue;
+    }
+
+>⇓
+
+    p.foo {
+      border-color: blue; 
+    }
