@@ -81,3 +81,14 @@ As suffix:
       padding-left: 0px;
       padding-bottom: 4px;
     }
+
+## Comments
+
+    /* CSS comment, 
+     * removed only in compressed mode */
+    
+    // always removed comment, 
+    // useful for developers
+    
+    /*! never removed comment, 
+     *  useful for copyright notices */
