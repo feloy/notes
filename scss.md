@@ -58,3 +58,26 @@ As suffix:
       font-weight: normal; 
     }
     
+### Nested properties
+
+    .mytypo {
+      font {
+        family: arial;
+        size: 12px;
+        weight: bold;
+      }
+      padding {
+        left: 0px;
+        bottom: 4px;
+      }
+    }
+
+>⇓
+
+    .mytypo {
+      font-family: arial;
+      font-size: 12px;
+      font-weight: bold;
+      padding-left: 0px;
+      padding-bottom: 4px;
+    }
