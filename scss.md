@@ -82,7 +82,7 @@ As suffix:
       padding-bottom: 4px;
     }
 
-## Comments
+### Comments
 
     /* CSS comment, 
      * removed only in compressed mode */
@@ -93,7 +93,7 @@ As suffix:
     /*! never removed comment, 
      *  useful for copyright notices */
 
-## Variables
+### Variables
 
 Syntax
 
@@ -126,3 +126,6 @@ Interpolation: #{}
     p.foo {
       border-color: blue; 
     }
+
+### Partials
+
