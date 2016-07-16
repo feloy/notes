@@ -61,12 +61,12 @@ As suffix:
 ### Nested properties
 
     .mytypo {
-      font {
+      font: {
         family: arial;
         size: 12px;
         weight: bold;
       }
-      padding {
+      padding: {
         left: 0px;
         bottom: 4px;
       }
@@ -97,7 +97,7 @@ As suffix:
 
 Syntax
 
-    $my-color = #ff0088;
+    $my-color: #ff0088;
     
     p.colored {
       // - and _ are interchangeable
@@ -106,7 +106,7 @@ Syntax
 
 Global vs local
 
-    $global-size = 4px;
+    $global-size: 4px;
     p {
       font-size: $global-size;
       $local-color: #FF0088;
