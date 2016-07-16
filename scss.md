@@ -286,3 +286,53 @@ Interpolation: #{}
     .tag3 {
       color: #00FF00;
     }
+
+### Placeholder (to extend)
+
+    $color1: #004000;
+    $color2: #008000;
+    $color3: #00FF00;
+
+    %tag {
+      border: 1px solid #A0A0A0;
+      background-color: #808080;
+    }
+
+    .tag1 {
+      @extend %tag;
+      color: $color1;
+    }
+
+    .tag2 {
+      @extend %tag;
+      color: $color2;
+    }
+
+    .tag3 {
+      @extend %tag;
+      color: $color3;
+    }
+
+>⇓
+
+    .tag1, .tag2, .tag3 {
+      border: 1px solid #A0A0A0;
+      background-color: #808080;
+    }
+    
+    .tag1 {
+      color: #004000;
+    }
+    
+    .tag2 {
+      color: #008000;
+    }
+    
+    .tag3 {
+      color: #00FF00;
+    }
+
+### Mixin vs Placeholder
+
+ - With parameters: include mixin
+ - With parameters: prefer to extend placeholder
