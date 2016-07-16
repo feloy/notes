@@ -229,3 +229,22 @@ Interpolation: #{}
       background-color: #00FF00;
       border: 1px solid #0000FF;
     }
+
+### Arguments: default, named
+
+    @mixin colorify($color, $bgcolor: transparent, $border: #808080) {
+      color: $color;
+      background-color: $bgcolor;
+      border: 1px solid $border;
+    }
+    .alert {
+      @include colorify($color: #FF0000, $bgcolor: #00FF00);
+    }
+
+>⇓
+
+    .alert {
+      color: #FF0000;
+      background-color: #00FF00;
+      border: 1px solid #808080;
+    }
