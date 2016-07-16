@@ -191,3 +191,22 @@ Interpolation: #{}
     $alert-color: orange;
     @import "module";
     
+### Mixin
+
+    @mixin clearfix {
+      height: 100%;
+      overflow: auto;
+    }
+    
+    tag { 
+      background-color: red;
+      @include clearfix;
+    }
+
+>⇓
+
+    tag {
+      background-color: red;
+      height: 100%;
+      overflow: auto;
+    }
