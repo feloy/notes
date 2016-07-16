@@ -129,3 +129,65 @@ Interpolation: #{}
 
 ### Partials
 
+**_part1.scss**
+
+    tag1 {
+      param1: value1;
+    }
+
+**_part2.scss**
+
+    tag2 {
+      param2: value2;
+    }
+    
+**_part3.scss**
+
+    subtag {
+      paramsub: subvalue;
+    }
+    
+**file.scss**
+
+    @import "part1";
+    @import "part2";
+    tag3 {
+      param3: value3;
+      @import "part3";
+    }
+
+
+>⇓
+
+    tag1 {
+      param1: value1;
+    }
+    tag2 {
+      param2: value2;
+    }
+    tag3 {
+      param3: value3;
+    }
+    tag3 subtag {
+      paramsub: subvalue;
+    }
+
+### Variable default value in partial
+
+**_module.scss**
+
+    $alert-color: red !default;
+    .alert {
+      color: $alert-color;
+    }
+    
+**with_default_value.scss**
+
+    @import "module";
+    
+    
+**with_custom_value.scss**
+
+    $alert-color: orange;
+    @import "module";
+    
