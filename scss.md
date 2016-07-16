@@ -210,3 +210,22 @@ Interpolation: #{}
       height: 100%;
       overflow: auto;
     }
+
+### Mixin with arguments
+
+    @mixin colorify($color, $bgcolor, $border) {
+      color: $color;
+      background-color: $bgcolor;
+      border: 1px solid $border;
+    }
+    .alert {
+      @include colorify(#FF0000, #00FF00, #0000FF);
+    }
+
+>⇓
+
+    .alert {
+      color: #FF0000;
+      background-color: #00FF00;
+      border: 1px solid #0000FF;
+    }
