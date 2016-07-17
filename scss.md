@@ -99,7 +99,7 @@ As suffix:
 
 ### Variables
 
-Syntax
+Variables Syntax
 
     $my-color: #ff0088;
     
@@ -108,7 +108,7 @@ Syntax
       color: $my_color
     }
 
-Global vs local
+Global vs local variables
 
     $global-size: 4px;
     p {
@@ -343,7 +343,7 @@ Interpolation: #{}
 
 ### Media Queries
 
-Nested
+Nested media queries
 
     .wrapper {
       width: 960px;
@@ -373,7 +373,7 @@ Nested
       }
     }
 
-With mixin
+Media queries with mixins
 
     $phone: 450px;
     $large-screen: 1400px;
@@ -417,4 +417,3 @@ With mixin
 
 ## Development
 
-bla 
