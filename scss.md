@@ -507,4 +507,23 @@ Media queries with mixins
 
 ### Functions
 
+#### Definition
+
+    @function my-function($a, $b) {
+      @return ($a + $b) / 2;
+    }
+    .class {
+      width: my-function(1px, 9px);
+    }
+    
+
+>⇓
+
+
+    .class {
+      width: 5px;
+    }
+
+#### Core functions
+
 http://sass-lang.com/documentation/frames.html#!Sass/Script/Functions.html
