@@ -429,27 +429,27 @@ Media queries with mixins
  - list
  - null
 
-### String type
+#### String type
 
 `astring` or `"astring"` or `'astring'`
 
-### Number type
+#### Number type
 
 `14` or `14px` or `14%` etc
 
-### Color type
+#### Color type
 
 `red` or `#F0F0F0` or `rgb(40, 40, 40)` or `rgba(40, 40, 40, 0.5)` or `hsl(30deg, 50%, 90%)` or `hsla(30deg, 50%, 90%, 0.5)`
 
-### Boolean type
+#### Boolean type
 
 `true` or `false`
 
-### List type
+#### List type
 
 `val1 val2 val3` or `val1, val2, val3` or `(val1 val2 val3)` or `(val1, val2, val3)`
 
-### Null type
+#### Null type
 
     $val: null;
     tag1 {
@@ -465,3 +465,42 @@ Media queries with mixins
     tag2 {
       param2: null;
     }
+
+### control directives
+
+#### if
+
+    @if condition {
+     // 
+    }
+    @else if condition {
+      // 
+    }
+    @else {
+      // 
+    }
+    
+#### for
+
+    @for $i from 1 to 10 {
+      // executed with i = 1 ... 9
+    }
+    
+    @for $i from 1 through 10 {
+      // executed with i = 1 ... 10
+    }
+    
+#### while
+
+    $i: 10;
+    @while $i > 0 {
+      // 
+      $i: $i - 1;
+    } 
+  
+#### each
+
+    @each $elt in $list-variable {
+      // Executed for each element in list
+    }
+    
