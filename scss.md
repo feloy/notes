@@ -1,11 +1,10 @@
 # SCSS
 
+>$ sass input.scss output.css
+ 
 - [Syntax](#syntax)
 - [Development](#development)
 
-
->$ sass input.scss output.css
- 
 ## Syntax
 
 ### Nested rules
