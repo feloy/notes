@@ -417,3 +417,52 @@ Media queries with mixins
 
 ## Development
 
+### Types
+
+    $ sass -i
+    >> type-of($val)
+    "string"
+
+ - string
+ - number
+ - color
+ - bool
+ - list
+ - null
+
+### String type
+
+`astring` or `"astring"` or `'astring'`
+
+### Number type
+
+`14` or `14px` or `14%` etc
+
+### Color type
+
+`red` or `#F0F0F0` or `rgb(40, 40, 40)` or `rgba(40, 40, 40, 0.5)` or `hsl(30deg, 50%, 90%)` or `hsla(30deg, 50%, 90%, 0.5)`
+
+### Boolean type
+
+`true` or `false`
+
+### List type
+
+`val1 val2 val3` or `val1, val2, val3` or `(val1 val2 val3)` or `(val1, val2, val3)`
+
+### Null type
+
+    $val: null;
+    tag1 {
+      param1: $val; // param1 will be removed (and tag1 because empty)
+    }
+    
+    tag2 {
+      param2: null; // null is considered the string "null"
+    }
+
+>⇓
+
+    tag2 {
+      param2: null;
+    }
