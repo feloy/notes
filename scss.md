@@ -1,6 +1,10 @@
 # SCSS
 
-    $ sass input.scss output.css
+- [Syntax](#syntax)
+- [Development](#development)
+
+
+>$ sass input.scss output.css
  
 ## Syntax
 
@@ -336,3 +340,81 @@ Interpolation: #{}
 
  - With parameters: include mixin
  - With parameters: prefer to extend placeholder
+
+### Media Queries
+
+Nested
+
+    .wrapper {
+      width: 960px;
+      @media only screen {
+          @media (min-width: 1400px) {
+            width: 1400px;
+          }
+          @media (max-width: 450px) {
+            width: 300px;
+          }
+      }
+    }
+
+>⇓
+
+    .wrapper {
+      width: 960px;
+    }
+    @media only screen and (min-width: 1400px) {
+      .wrapper {
+        width: 1400px;
+      }
+    }
+    @media only screen and (max-width: 450px) {
+      .wrapper {
+        width: 300px;
+      }
+    }
+
+With mixin
+
+    $phone: 450px;
+    $large-screen: 1400px;
+    
+    @mixin at-least($device-width) {
+      @media only screen and (min-width: $device-with) {
+        @content;
+      }
+    }
+    @mixin until($device-width) {
+      @media only screen and (max-width: $device-with - 1) {
+        @content;
+      }
+    }
+    
+    .wrapper {
+      width: 960px;
+      @include at-least($large-screen) {
+        width: $large-screen;
+      }
+      @include until($phone) {
+        width: 300px;
+      }
+    }
+
+>⇓
+
+    .wrapper {
+      width: 960px;
+    }
+    @media only screen and (min-width: 1400px) {
+      .wrapper {
+        width: 1400px;
+      }
+    }
+    @media only screen and (max-width: 449px) {
+      .wrapper {
+        width: 300px;
+      }
+    }
+
+## Development
+
+bla 
